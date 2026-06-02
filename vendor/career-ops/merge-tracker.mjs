@@ -18,19 +18,17 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, renameSync, exists
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execFileSync } from 'child_process';
+import { dataDir, jobhuntHome } from '../../scripts/paths.mjs';
 
 const CAREER_OPS = dirname(fileURLToPath(import.meta.url));
-// Support both layouts: data/applications.md (boilerplate) and applications.md (original)
-const APPS_FILE = existsSync(join(CAREER_OPS, 'data/applications.md'))
-  ? join(CAREER_OPS, 'data/applications.md')
-  : join(CAREER_OPS, 'applications.md');
-const ADDITIONS_DIR = join(CAREER_OPS, 'batch/tracker-additions');
+const APPS_FILE = join(dataDir(), 'applications.md');
+const ADDITIONS_DIR = join(jobhuntHome(), 'batch', 'tracker-additions');
 const MERGED_DIR = join(ADDITIONS_DIR, 'merged');
 const DRY_RUN = process.argv.includes('--dry-run');
 const VERIFY = process.argv.includes('--verify');
 
 // Ensure required directories exist (fresh setup)
-mkdirSync(join(CAREER_OPS, 'data'), { recursive: true });
+mkdirSync(dataDir(), { recursive: true });
 mkdirSync(ADDITIONS_DIR, { recursive: true });
 
 // Canonical states and aliases

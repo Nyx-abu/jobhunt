@@ -8,9 +8,10 @@
 import { existsSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { configDir, jobhuntHome } from '../../scripts/paths.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const projectRoot = __dirname;
+const projectRoot = jobhuntHome();
 
 // ANSI colors (only on TTY)
 const isTTY = process.stdout.isTTY;
@@ -31,7 +32,9 @@ function checkNodeVersion() {
 }
 
 function checkDependencies() {
-  if (existsSync(join(projectRoot, 'node_modules'))) {
+  // node_modules ships with the package, not in $JOBHUNT_HOME
+  const pkgRoot = join(__dirname, '..', '..');
+  if (existsSync(join(pkgRoot, 'node_modules'))) {
     return { pass: true, label: 'Dependencies installed' };
   }
   return {
@@ -63,49 +66,50 @@ async function checkPlaywright() {
 }
 
 function checkCv() {
-  if (existsSync(join(projectRoot, 'cv.md'))) {
+  if (existsSync(join(configDir(), 'cv.md'))) {
     return { pass: true, label: 'cv.md found' };
   }
   return {
     pass: false,
     label: 'cv.md not found',
     fix: [
-      'Create cv.md in the project root with your CV in markdown',
-      'See examples/ for reference CVs',
+      'Run: /jobhunt setup',
+      'Or create $JOBHUNT_HOME/cv.md with your CV in markdown',
     ],
   };
 }
 
 function checkProfile() {
-  if (existsSync(join(projectRoot, 'config', 'profile.yml'))) {
-    return { pass: true, label: 'config/profile.yml found' };
+  if (existsSync(join(configDir(), 'profile.yml'))) {
+    return { pass: true, label: 'profile.yml found' };
   }
   return {
     pass: false,
-    label: 'config/profile.yml not found',
+    label: 'profile.yml not found',
     fix: [
-      'Run: cp config/profile.example.yml config/profile.yml',
-      'Then edit it with your details',
+      'Run: /jobhunt setup',
+      'Or copy config/profile.example.yml to $JOBHUNT_HOME/profile.yml and edit',
     ],
   };
 }
 
 function checkPortals() {
-  if (existsSync(join(projectRoot, 'portals.yml'))) {
+  if (existsSync(join(configDir(), 'portals.yml'))) {
     return { pass: true, label: 'portals.yml found' };
   }
   return {
     pass: false,
     label: 'portals.yml not found',
     fix: [
-      'Run: cp templates/portals.example.yml portals.yml',
-      'Then customize with your target companies',
+      'Run: /jobhunt setup',
+      'Or copy config/portals.example.yml to $JOBHUNT_HOME/portals.yml',
     ],
   };
 }
 
 function checkFonts() {
-  const fontsDir = join(projectRoot, 'fonts');
+  // fonts/ ships with the package next to vendor/
+  const fontsDir = join(__dirname, '..', '..', 'fonts');
   if (!existsSync(fontsDir)) {
     return {
       pass: false,
