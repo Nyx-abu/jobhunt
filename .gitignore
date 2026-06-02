@@ -1,0 +1,16 @@
+node_modules/
+.cache/
+company/
+data/applications.md
+data/pipeline.md
+data/rank-log.jsonl
+cv.md
+cv.pdf
+profile.yml
+portals.yml
+.morning-*.md
+.DS_Store
+Thumbs.db
+.env
+.env.local
+test/output/
