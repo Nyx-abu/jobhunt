@@ -1,0 +1,8 @@
+﻿country_code: IE
+country_name: Ireland
+currency: EUR
+salary_floor: 36000
+salary_target_max: 70000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

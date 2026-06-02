@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="UTF-8">
+<title>Mock Interview Pack — {{COMPANY}} · {{ROLE}}</title>
+<style>
+@font-face { font-family: 'Space Grotesk'; src: url('./fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 400 900; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('./fonts/dm-sans-latin.woff2') format('woff2'); font-weight: 400 700; font-display: swap; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+@page { size: {{PAGE_WIDTH}} auto; margin: 0.6in; }
+html, body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* Cover header */
+header.cover {
+  margin-bottom: 0.4in;
+  page-break-after: avoid;
+}
+.title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0a0a0a;
+}
+.subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13pt;
+  font-weight: 500;
+  color: hsl(187, 74%, 32%);
+  margin-top: 2px;
+}
+.gradient-line {
+  height: 2px;
+  background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+  margin: 10px 0 12px;
+}
+.meta-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 14px;
+  font-size: 9.5pt;
+  color: #444;
+}
+.meta-grid dt {
+  font-weight: 600;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 8.5pt;
+}
+
+/* Process overview block */
+.process {
+  margin-top: 0.3in;
+  padding: 12px 14px;
+  border-left: 3px solid hsl(270, 70%, 45%);
+  background: #fafafa;
+  font-size: 10pt;
+}
+.process h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(187, 74%, 32%);
+  margin-bottom: 6px;
+}
+
+/* Audience packs */
+.audience {
+  margin-top: 0.35in;
+  page-break-inside: avoid;
+}
+.audience h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13pt;
+  font-weight: 600;
+  color: hsl(270, 70%, 35%);
+  border-bottom: 1.5px solid #e5e5e5;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+.audience .role-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+/* Q/A blocks */
+.qa {
+  margin-top: 0.18in;
+  page-break-inside: avoid;
+}
+.qa .q {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 10.5pt;
+  color: #0a0a0a;
+}
+.qa .q .tag {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8pt;
+  font-weight: 500;
+  color: #888;
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.qa .a {
+  margin-top: 4px;
+  padding-left: 12px;
+  border-left: 2px solid hsl(187, 74%, 32%);
+  font-size: 10pt;
+  color: #2a2a2a;
+}
+.qa .why {
+  margin-top: 4px;
+  font-size: 9pt;
+  font-style: italic;
+  color: #666;
+}
+
+/* Questions-to-ask section */
+.ask-back {
+  margin-top: 0.18in;
+  padding: 10px 12px;
+  background: #f8f4ff;
+  border-left: 3px solid hsl(270, 70%, 45%);
+  font-size: 10pt;
+}
+.ask-back h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(270, 70%, 35%);
+  margin-bottom: 5px;
+}
+.ask-back ol {
+  margin-left: 16px;
+}
+.ask-back li {
+  margin-top: 3px;
+}
+
+/* Red-flag callout */
+.flags {
+  margin-top: 0.25in;
+  padding: 10px 12px;
+  background: #fff8f0;
+  border-left: 3px solid #c47900;
+  font-size: 9.5pt;
+}
+.flags h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8a5500;
+  margin-bottom: 5px;
+}
+
+/* Sources footer */
+footer.sources {
+  margin-top: 0.4in;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 8.5pt;
+  color: #777;
+}
+footer.sources strong { color: #444; }
+footer.sources a { color: hsl(187, 74%, 32%); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="title">Mock Interview Pack</div>
+  <div class="subtitle">{{COMPANY}} — {{ROLE}}</div>
+  <div class="gradient-line"></div>
+  <dl class="meta-grid">
+    <dt>Candidate</dt><dd>{{CANDIDATE_NAME}}</dd>
+    <dt>Researched</dt><dd>{{DATE_LONG}}</dd>
+    <dt>Process</dt><dd>{{PROCESS_SUMMARY}}</dd>
+    <dt>Difficulty</dt><dd>{{DIFFICULTY}}/5 · {{POSITIVE_EXPERIENCE}}% positive ({{N_REVIEWS}} reviews)</dd>
+    <dt>Audiences</dt><dd>{{AUDIENCES_LIST}}</dd>
+  </dl>
+
+  <div class="process">
+    <h2>Process Overview</h2>
+    {{PROCESS_OVERVIEW_HTML}}
+  </div>
+</header>
+
+<!--
+  Three audience packs. The "apply" mode generates these in one LLM call.
+  Each pack: 5-7 questions, drafted answers anchored to cv.md, 2-3 questions
+  to ask back. Sourced questions cite; inferred questions tag "[inferred from JD]".
+-->
+
+<section class="audience" id="recruiter-screen">
+  <h2>1. Recruiter / HR Screen</h2>
+  <div class="role-tag">Audience: recruiter-screen · Fit gate (motivation, comp, logistics)</div>
+  {{RECRUITER_QA_HTML}}
+  <div class="ask-back">
+    <h3>Questions to ask back</h3>
+    {{RECRUITER_ASK_BACK_HTML}}
+  </div>
+  <div class="flags">
+    <h3>Red flags they screen for</h3>
+    {{RECRUITER_RED_FLAGS_HTML}}
+  </div>
+</section>
+
+<section class="audience" id="hiring-manager">
+  <h2>2. Hiring Manager</h2>
+  <div class="role-tag">Audience: hiring-manager · Motivation + scope fit + leadership signals</div>
+  {{HM_QA_HTML}}
+  <div class="ask-back">
+    <h3>Questions to ask back (sharp, specific)</h3>
+    {{HM_ASK_BACK_HTML}}
+  </div>
+</section>
+
+<section class="audience" id="peer-tech">
+  <h2>3. Peer / Technical Panel</h2>
+  <div class="role-tag">Audience: peer-tech · Depth + collaboration on the actual stack</div>
+  {{PEER_QA_HTML}}
+  <div class="ask-back">
+    <h3>Questions to ask back (signal real curiosity)</h3>
+    {{PEER_ASK_BACK_HTML}}
+  </div>
+</section>
+
+<section class="audience" id="story-bank">
+  <h2>Story Bank Mapping</h2>
+  <div class="role-tag">Which existing STAR+R stories cover which likely questions</div>
+  {{STORY_BANK_TABLE_HTML}}
+</section>
+
+<footer class="sources">
+  <strong>Sources:</strong>
+  {{SOURCES_HTML}}
+  <br><br>
+  Generated by <code>jobhunt</code> from <code>cv.md</code>, <code>jd.md</code>, <code>interview-prep/story-bank.md</code>, and {{N_SOURCES}} external sources.
+  Inferred questions are tagged <code>[inferred from JD]</code> — they were not sourced from real candidates.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿country_code: EU
+country_name: European Union (general)
+currency: EUR
+salary_floor: 35000
+salary_target_max: 70000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

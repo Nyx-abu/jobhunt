@@ -1,0 +1,8 @@
+﻿country_code: BR
+country_name: Brazil
+currency: BRL
+salary_floor: 80000
+salary_target_max: 180000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

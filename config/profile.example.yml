@@ -1,0 +1,59 @@
+# Example profile — Jordan Rivera (fictional)
+# This file is the template. /jobhunt setup writes profile.yml in $JOBHUNT_HOME
+# using your answers + the selected locale's defaults.
+
+candidate:
+  full_name: "Jordan Rivera"
+  email: "jordan@example.com"
+  phone: ""
+  location: "Remote (US-based)"
+  linkedin: "linkedin.com/in/example"
+  portfolio_url: ""
+  github: "github.com/example"
+  twitter: ""
+
+target_roles:
+  primary:
+    - "Junior Full-Stack Developer"
+    - "Junior Backend Engineer (Node.js / TypeScript)"
+  archetypes:
+    - name: "Full-Stack Engineer"
+      level: "Junior/Associate"
+      fit: "primary"
+
+experience_level: junior        # junior | mid | senior
+
+narrative:
+  headline: "Junior full-stack developer shipping production TypeScript apps"
+  exit_story: "1 year of internships, freelance, and personal projects."
+  superpowers:
+    - "Ships full-stack apps end-to-end (Next.js + Node.js + Postgres)"
+    - "Real-time systems experience: WebSocket/SSE streams"
+  proof_points:
+    - name: "Example Project A"
+      url: ""
+      hero_metric: "Built X feature that did Y, measured by Z"
+
+compensation:
+  # Filled by /jobhunt setup based on country choice. Edit freely.
+  target_range: "USD 40K-80K"
+  currency: USD
+  minimum: "USD 40K"
+  salary_floor_usd: 40000
+  salary_target_usd_max: 80000
+  location_flexibility: "Open to remote roles globally"
+
+company_filter:
+  # Default: no exclusions. Add slugs here to skip.
+  excluded_tiers: []
+  hard_exclude_slugs: []
+
+location:
+  country: "US"
+  city: ""
+  timezone: ""
+  visa_status: "US citizen / authorized to work"
+  onsite_availability: "Remote-preferred"
+
+cv:
+  output_format: "html"

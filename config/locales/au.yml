@@ -1,0 +1,8 @@
+﻿country_code: AU
+country_name: Australia
+currency: AUD
+salary_floor: 65000
+salary_target_max: 110000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

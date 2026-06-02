@@ -1,0 +1,8 @@
+﻿country_code: US
+country_name: United States
+currency: USD
+salary_floor: 40000
+salary_target_max: 80000
+pdf_format: letter
+date_format: "MMM YYYY"
+language: en

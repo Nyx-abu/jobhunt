@@ -1,0 +1,8 @@
+﻿country_code: IN
+country_name: India
+currency: INR
+salary_floor: 1000000
+salary_target_max: 2500000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

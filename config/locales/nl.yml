@@ -1,0 +1,8 @@
+﻿country_code: NL
+country_name: Netherlands
+currency: EUR
+salary_floor: 38000
+salary_target_max: 72000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

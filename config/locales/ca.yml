@@ -1,0 +1,8 @@
+﻿country_code: CA
+country_name: Canada
+currency: CAD
+salary_floor: 60000
+salary_target_max: 100000
+pdf_format: letter
+date_format: "MMM YYYY"
+language: en

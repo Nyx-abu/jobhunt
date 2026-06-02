@@ -1,0 +1,8 @@
+﻿country_code: DE
+country_name: Germany
+currency: EUR
+salary_floor: 38000
+salary_target_max: 75000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

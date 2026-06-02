@@ -1,0 +1,150 @@
+# Example portals configuration for jobhunt
+# /jobhunt setup copies this into $JOBHUNT_HOME/portals.yml and overlays
+# locale defaults on title/location filters.
+#
+# Add your own companies by appending to tracked_companies.
+# Disable a company without removing it by setting enabled: false.
+
+location_filter:
+  allow:
+    - "Remote"
+    - "Anywhere"
+    - "Worldwide"
+    - "Global"
+    - "Distributed"
+  block:
+    - "On-site only"
+    - "Hybrid only"
+
+title_filter:
+  positive:
+    - "Software Engineer"
+    - "Full Stack"
+    - "Fullstack"
+    - "Backend"
+    - "Frontend"
+    - "Product Engineer"
+    - "Junior"
+    - "Associate Engineer"
+    - "AI Engineer"
+    - "ML Engineer"
+    - "Applied AI"
+    - "RAG"
+  negative:
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Manager"
+    - "Director"
+    - "Embedded"
+    - "Firmware"
+    - "iOS"
+    - "Android"
+
+search_queries:
+  - name: Ashby — Junior/Associate Full-Stack remote-global
+    query: 'site:jobs.ashbyhq.com ("Junior" OR "Associate") ("Full Stack" OR "Backend" OR "Frontend") remote'
+    enabled: true
+
+  - name: Greenhouse — Junior AI/RAG remote-global
+    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io ("Junior AI" OR "Associate AI" OR "AI Engineer") remote'
+    enabled: true
+
+  - name: Lever — Junior SWE global-hire
+    query: 'site:jobs.lever.co ("Junior" OR "Associate") (software OR developer OR engineer) ("worldwide" OR "global" OR "anywhere")'
+    enabled: true
+
+  - name: WeWorkRemotely — Junior Node/TS/React
+    query: 'site:weworkremotely.com ("Junior" OR "Associate") (Node OR TypeScript OR React OR Next.js)'
+    enabled: true
+
+  - name: YC Jobs — Applied AI / Founding Engineer remote
+    query: 'site:workatastartup.com "Applied AI" OR "AI Engineer" OR "Founding Engineer" remote'
+    enabled: true
+
+tracked_companies:
+  - name: LangChain
+    careers_url: https://jobs.ashbyhq.com/langchain
+    enabled: true
+
+  - name: Pinecone
+    careers_url: https://jobs.ashbyhq.com/pinecone
+    enabled: true
+
+  - name: Resend
+    careers_url: https://jobs.ashbyhq.com/resend
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/resend'
+    enabled: true
+
+  - name: Clerk
+    careers_url: https://jobs.ashbyhq.com/clerk
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/clerk'
+    enabled: true
+
+  - name: Inngest
+    careers_url: https://jobs.ashbyhq.com/inngest
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/inngest'
+    enabled: true
+
+  - name: Supabase
+    careers_url: https://jobs.ashbyhq.com/supabase
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/supabase'
+    enabled: true
+
+  - name: PlanetScale
+    careers_url: https://job-boards.greenhouse.io/planetscale
+    api: https://boards-api.greenhouse.io/v1/boards/planetscale/jobs
+    enabled: true
+
+  - name: Lovable
+    careers_url: https://jobs.ashbyhq.com/lovable
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/lovable'
+    enabled: true
+
+  - name: Decagon
+    careers_url: https://jobs.ashbyhq.com/decagon
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/decagon'
+    enabled: true
+
+  - name: Sierra
+    careers_url: https://jobs.ashbyhq.com/sierra
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/sierra'
+    enabled: true
+
+  - name: Lindy
+    careers_url: https://jobs.ashbyhq.com/lindy
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/lindy'
+    enabled: true
+
+  - name: WorkOS
+    careers_url: https://jobs.ashbyhq.com/workos
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/workos'
+    enabled: true
+
+  - name: Cognigy
+    careers_url: https://careers.cognigy.com
+    scan_method: websearch
+    scan_query: '"cognigy" careers "AI" OR "Engineer"'
+    enabled: true
+
+  - name: Lakera
+    careers_url: https://jobs.ashbyhq.com/lakera.ai
+    scan_method: websearch
+    scan_query: 'site:jobs.ashbyhq.com/lakera.ai'
+    enabled: true
+
+  - name: Attio
+    careers_url: https://jobs.ashbyhq.com/attio
+    scan_method: websearch
+    scan_query: 'site:attio.com/careers OR site:jobs.ashbyhq.com/attio'
+    enabled: true

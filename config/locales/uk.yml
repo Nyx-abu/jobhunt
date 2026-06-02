@@ -1,0 +1,8 @@
+﻿country_code: UK
+country_name: United Kingdom
+currency: GBP
+salary_floor: 30000
+salary_target_max: 60000
+pdf_format: a4
+date_format: "MMM YYYY"
+language: en

@@ -1,0 +1,8 @@
+﻿country_code: MX
+country_name: Mexico
+currency: MXN
+salary_floor: 480000
+salary_target_max: 960000
+pdf_format: letter
+date_format: "MMM YYYY"
+language: en
