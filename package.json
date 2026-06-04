@@ -1,6 +1,6 @@
 {
   "name": "jobhunt-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claude Code skill: scan job portals, rank against your CV, build tailored application packages.",
   "type": "module",
   "bin": {
