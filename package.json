@@ -11,7 +11,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "test": "mocha test/**/*.test.mjs",
+    "test": "node --test test/paths.test.mjs test/why.test.mjs test/smoke.test.mjs",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish",
@@ -35,7 +35,8 @@
     "career"
   ],
   "devDependencies": {
-    "@changesets/cli": "^2.31.0"
+    "@changesets/cli": "^2.31.0",
+    "eslint": "^9.0.0"
   },
   "overrides": {
     "human-id": "1.0.2"
