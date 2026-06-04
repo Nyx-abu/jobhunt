@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Claude Code skill: scan job portals, rank against your CV, build tailored application packages.",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "jobhunt-skill": "scripts/install-skill.mjs"
   },
