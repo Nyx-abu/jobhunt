@@ -1,8 +1,11 @@
 {
-  "name": "jobhunt",
-  "version": "0.1.0-dev",
+  "name": "jobhunt-skill",
+  "version": "1.0.0",
   "description": "Claude Code skill: scan job portals, rank against your CV, build tailored application packages.",
   "type": "module",
+  "bin": {
+    "jobhunt-skill": "scripts/install-skill.mjs"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"

@@ -18,8 +18,23 @@ You wake up to 5 folders, review them, submit the ones worth submitting.
 
 ## Quickstart
 
+There are two ways to install `jobhunt`:
+
+### Method 1: NPM Auto-Installer (Recommended)
+You can install `jobhunt` via NPM. It will automatically detect your local Claude configuration and install the skill seamlessly:
+```bash
+$ npm install -g jobhunt-skill
+$ npx jobhunt-skill
+```
+
+### Method 2: Manual / npx skills add
+If you are already familiar with the community skills manager, you can use it:
 ```bash
 $ npx skills add github.com/Nyx-abu/jobhunt
+```
+
+After installation, run the setup wizard:
+```bash
 $ /jobhunt setup
   > Country? US
   > CV file path? ./resume.pdf
@@ -53,6 +68,13 @@ Three commands · seven questions · one PDF · working output.
 - **Honest about skips**: `/jobhunt why <slug>` explains why each opening was skipped
 - **Token-thrifty**: ~$0.40-0.60 per morning at default settings (Anthropic API)
 - **Zero auto-submit**: produces artifacts; you review and submit
+
+---
+
+> [!TIP]
+> **Cross-Agent Testing Initiative**: While `jobhunt` is battle-tested on Claude Code, we want to ensure it works across all agents (Cursor, Gemini CLI, Antigravity, Windsurf, etc.). We need testers! Check out [CONTRIBUTING.md](CONTRIBUTING.md) if you can help verify or improve cross-agent compatibility.
+
+---
 
 ## Modes
 
