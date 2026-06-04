@@ -11,7 +11,10 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "test": "node --test test/paths.test.mjs test/why.test.mjs test/smoke.test.mjs",
+    "test": "mocha test/**/*.test.mjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
     "test:smoke": "node --test test/smoke.test.mjs",
     "setup": "node scripts/setup.mjs"
   },
@@ -30,5 +33,8 @@
     "resume",
     "ats",
     "career"
-  ]
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0"
+  }
 }
